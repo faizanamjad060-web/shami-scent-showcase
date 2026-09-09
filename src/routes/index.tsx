@@ -6,6 +6,7 @@ import {
   fragranceList,
   formatPrice,
   WHATSAPP_NUMBERS,
+  waLink,
   type Product,
 } from "@/lib/products";
 import collection from "@/assets/collection.jpg.asset.json";
@@ -292,9 +293,7 @@ function AboutProducts({ onAdd }: { onAdd: (p: Product, buyNow?: boolean) => voi
             prices stay the same.
           </p>
           <a
-            href={`https://wa.me/92${WHATSAPP_NUMBERS[0].slice(1)}?text=${encodeURIComponent(
-              "I want the 3 bottles for Rs. 6,000 offer",
-            )}`}
+            href={waLink("I want the 3 bottles for Rs. 6,000 offer")}
             target="_blank"
             rel="noreferrer"
             className="mt-6 inline-block rounded-sm bg-primary px-8 py-3 text-[11px] tracking-[0.25em] text-primary-foreground"
@@ -370,10 +369,10 @@ function CartDrawer({
   const [address, setAddress] = useState("");
   const [payment, setPayment] = useState("Cash on Delivery");
 
-  const orderText = encodeURIComponent(
+  const orderText = (
     `Order from By Shami Fragrances\n\n${cart
       .map((l) => `${l.qty} x ${l.product.name} (${l.product.size}) - ${formatPrice(l.product.price * l.qty)}`)
-      .join("\n")}\n\nTotal: ${formatPrice(total)}\nPayment: ${payment}\nName: ${name}\nPhone: ${phone}\nAddress: ${address}`,
+      .join("\n")}\n\nTotal: ${formatPrice(total)}\nPayment: ${payment}\nName: ${name}\nPhone: ${phone}\nAddress: ${address}`
   );
 
   return (
@@ -496,7 +495,7 @@ function CartDrawer({
             </button>
           ) : (
             <a
-              href={`https://wa.me/92${WHATSAPP_NUMBERS[0].slice(1)}?text=${orderText}`}
+              href={waLink(orderText)}
               target="_blank"
               rel="noreferrer"
               className="block w-full rounded-sm bg-primary py-3 text-center text-[11px] tracking-[0.25em] text-primary-foreground"

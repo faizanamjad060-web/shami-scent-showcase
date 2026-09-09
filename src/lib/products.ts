@@ -126,4 +126,7 @@ export const fragranceList = [
 
 export const formatPrice = (n: number) => `Rs. ${n.toLocaleString("en-PK")}`;
 
-export const WHATSAPP_NUMBERS = ["03067970247", "03187970247"];
+export const WHATSAPP_PRIMARY = "03067970247";
+export const WHATSAPP_NUMBERS: string[] = [WHATSAPP_PRIMARY, "03187970247"];
+export const waLink = (text?: string) =>
+  `https://wa.me/92${WHATSAPP_PRIMARY.slice(1)}${text ? `?text=${encodeURIComponent(text)}` : ""}`;
