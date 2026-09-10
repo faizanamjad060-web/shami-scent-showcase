@@ -1,14 +1,14 @@
 import diorSauvage from "@/assets/dior-sauvage.jpg.asset.json";
-import shamailOud from "@/assets/shamail-oud.jpg.asset.json";
-import oudAlShami from "@/assets/oud-al-shami.jpg.asset.json";
-import officeForMen from "@/assets/office-for-men.jpg.asset.json";
-import officeTamam from "@/assets/office-tamam-leather.jpg.asset.json";
-import dunhill from "@/assets/dunhill-desire.jpg.asset.json";
-import muskAlAjami from "@/assets/musk-al-ajami.jpg.asset.json";
-import ajmalDubai from "@/assets/ajmal-dubai.jpg.asset.json";
-import alEmarat from "@/assets/al-emarat.jpg.asset.json";
-import zarrarGold from "@/assets/zarrar-gold.jpg.asset.json";
-import oudAlAjami from "@/assets/oud-al-ajami.jpg.asset.json";
+import ajmalDubai from "@/assets/ajmal-dubai-new.jpg.asset.json";
+import oudAlShami from "@/assets/oud-al-shami-new.jpg.asset.json";
+import officeForMen from "@/assets/office-for-men-new.jpg.asset.json";
+import dunhillDesire from "@/assets/dunhill-desire-new.jpg.asset.json";
+import zaraarGold from "@/assets/zaraar-gold-new.jpg.asset.json";
+import afshAlTamamLeather from "@/assets/afsh-al-tamam-leather.jpg.asset.json";
+import alEmaratAlTamamAmir from "@/assets/al-emarat-al-tamam-amir.jpg.asset.json";
+import jananSport from "@/assets/janan-sport.jpg.asset.json";
+import oudAlAjami from "@/assets/oud-al-ajami-new.jpg.asset.json";
+import muskAlAjami from "@/assets/musk-al-ajami-new.jpg.asset.json";
 import testers from "@/assets/testers.jpg.asset.json";
 
 export type Product = {
@@ -30,16 +30,15 @@ export const products: Product[] = [
     note: "Special price",
   },
   {
-    id: "shamail-oud",
-    name: "Shamail Oud",
-    size: "50ml",
+    id: "ajmal-dubai",
+    name: "Ajmal Dubai",
+    size: "30ml",
     price: 2499,
-    image: shamailOud.url,
-    note: "Now available",
+    image: ajmalDubai.url,
   },
   {
     id: "oud-al-shami",
-    name: "Oud Al Shami – Signature by Al Shami 12",
+    name: "Oud Al-Shami",
     size: "30ml",
     price: 2499,
     image: oudAlShami.url,
@@ -52,53 +51,53 @@ export const products: Product[] = [
     image: officeForMen.url,
   },
   {
-    id: "office-al-tamam-leather",
-    name: "Office Al Tamam Leather – Signature by Al Shami 12",
-    size: "30ml",
-    price: 2499,
-    image: officeTamam.url,
-  },
-  {
     id: "dunhill-desire",
     name: "Dunhill Desire",
     size: "30ml",
     price: 2499,
-    image: dunhill.url,
+    image: dunhillDesire.url,
   },
   {
-    id: "musk-al-ajami",
-    name: "Musk Al Ajami – Signature by Al Shami 12",
+    id: "zaraar-gold",
+    name: "Zaraar Gold",
     size: "30ml",
     price: 2499,
-    image: muskAlAjami.url,
+    image: zaraarGold.url,
   },
   {
-    id: "ajmal-dubai",
-    name: "Ajmal Dubai",
+    id: "afsh-al-tamam-leather",
+    name: "Afsh Al-Tamam Leather",
     size: "30ml",
     price: 2499,
-    image: ajmalDubai.url,
+    image: afshAlTamamLeather.url,
   },
   {
-    id: "al-emarat-al-amir",
-    name: "Al Emarat Al Amir – 12",
+    id: "al-emarat-al-tamam-amir",
+    name: "Al Emarat Al-Tamam Amir",
     size: "30ml",
     price: 2499,
-    image: alEmarat.url,
+    image: alEmaratAlTamamAmir.url,
   },
   {
-    id: "zarrar-gold",
-    name: "Zarar Gold",
+    id: "janan-sport",
+    name: "Janan Sport",
     size: "30ml",
     price: 2499,
-    image: zarrarGold.url,
+    image: jananSport.url,
   },
   {
     id: "oud-al-ajami",
-    name: "Oud Al Ajami – Signature by Al Shami 12",
+    name: "Oud Al-Ajami",
     size: "30ml",
     price: 2499,
     image: oudAlAjami.url,
+  },
+  {
+    id: "musk-al-ajami",
+    name: "Musk Al-Ajami",
+    size: "30ml",
+    price: 2499,
+    image: muskAlAjami.url,
   },
 ];
 
@@ -112,16 +111,16 @@ export const testerSet: Product = {
 };
 
 export const fragranceList = [
-  "Dior Sauvage",
-  "Oud Al Shami – Signature by Al Shami 12",
-  "Office for Men",
-  "Office Al Tamam Leather – Signature by Al Shami 12",
-  "Dunhill Desire",
-  "Musk Al Ajami – Signature by Al Shami 12",
   "Ajmal Dubai",
-  "Al Emarat Al Amir – 12",
-  "Zarar Gold",
-  "Oud Al Ajami – Signature by Al Shami 12",
+  "Oud Al-Shami",
+  "Office for Men",
+  "Dunhill Desire",
+  "Zaraar Gold",
+  "Afsh Al-Tamam Leather",
+  "Al Emarat Al-Tamam Amir",
+  "Janan Sport",
+  "Oud Al-Ajami",
+  "Musk Al-Ajami",
 ];
 
 export const formatPrice = (n: number) => `Rs. ${n.toLocaleString("en-PK")}`;
