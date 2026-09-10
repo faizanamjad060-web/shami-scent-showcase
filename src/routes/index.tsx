@@ -19,7 +19,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Shop By Shami Fragrances: premium 30ml perfumes at Rs. 2,499, Dior Sauvage 30ml Rs. 1,800, Shamail Oud 50ml, 4 testers for Rs. 1,500 and 3 bottles for Rs. 6,000.",
+          "Shop By Shami Fragrances: ten premium 30ml perfumes at Rs. 2,499, Dior Sauvage 30ml at Rs. 1,800, 4 testers for Rs. 1,500 and 3 bottles for Rs. 6,000.",
       },
       { property: "og:title", content: "By Shami Fragrances | Premium Long-Lasting Perfumes" },
       {
@@ -27,6 +27,8 @@ export const Route = createFileRoute("/")({
         content:
           "Signature oud, musk and designer-inspired perfumes. Individual 30ml bottles, tester sets and a 3-bottle offer.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Home,
@@ -510,6 +512,9 @@ function CartDrawer({
 }
 
 function Footer() {
+  const facebookUrl =
+    "https://www.facebook.com/permalink.php?story_fbid=pfbid0bsRTRLBq9NbPrgFuC4JBsWxSQbTBptBix7G3CYMQpn87UiS4m22kEKhCX8Dt3ZiEl&id=61594189490229";
+
   return (
     <footer className="mx-auto max-w-6xl px-4 py-14 text-center">
       <p className="gold-text font-display text-2xl tracking-[0.15em]">BY SHAMI</p>
@@ -529,6 +534,22 @@ function Footer() {
           </a>
         ))}
       </div>
+      <a
+        href={facebookUrl}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Visit By Shami Fragrances on Facebook"
+        className="mt-7 inline-flex items-center gap-2 text-sm text-primary transition-opacity hover:opacity-80"
+      >
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 24 24"
+          className="h-5 w-5 fill-current"
+        >
+          <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06C2 17.08 5.66 21.25 10.44 22v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.5-3.91 3.78-3.91 1.09 0 2.23.2 2.23.2V8.6H15.2c-1.24 0-1.63.77-1.63 1.56v1.9h2.77l-.44 2.91h-2.33V22C18.34 21.25 22 17.08 22 12.06Z" />
+        </svg>
+        Follow us on Facebook
+      </a>
       <p className="mt-8 text-xs text-muted-foreground">
         © {new Date().getFullYear()} By Shami Fragrances. All rights reserved.
       </p>
