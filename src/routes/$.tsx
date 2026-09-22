@@ -24,7 +24,10 @@ export const Route = createFileRoute("/$")({
   beforeLoad: ({ params }) => {
     const slug = (params._splat ?? "").replace(/^\/+|\/+$/g, "").toLowerCase();
     const hash = SECTION_PATHS[slug];
-    throw redirect({ to: "/", hash: hash ? hash.slice(1) : undefined, replace: true });
+    if (hash) {
+      throw redirect({ to: "/", hash: hash.slice(1), replace: true });
+    }
+    throw redirect({ to: "/", replace: true });
   },
   component: () => null,
 });
